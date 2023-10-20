@@ -1,12 +1,17 @@
-import { useState } from 'react'
 import './App.css'
-import Button from '@mui/material/Button'
+import MainAccountCard from './components/MainAccountCard'
+import FunctionalButtons from './components/FunctionalButtons'
+import TransactionsList from './components/TransactionsList/TransactionsList'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <>
-      <Button variant="contained">Contained</Button>
-    </>
+    <div className='app'>
+      <Navbar />
+      <MainAccountCard />
+      <FunctionalButtons />
+      <TransactionsList />
+    </div>
   )
 }
 
