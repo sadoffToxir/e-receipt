@@ -1,16 +1,25 @@
 import './App.css'
-import MainAccountCard from './components/MainAccountCard/MainAccountCard'
-import FunctionalButtons from './components/FunctionalButtons/FunctionalButtons'
-import TransactionsList from './components/TransactionsList/TransactionsList'
 import Navbar from './components/Navbar/Navbar'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+
+import { Home } from './pages/Home'
+import { TransactionDetails } from './pages/TransactionDetails'
+import { Transactions } from './pages/Transactions'
 
 function App() {
   return (
     <div className='app'>
       <Navbar />
-      <MainAccountCard />
-      <FunctionalButtons />
-      <TransactionsList />
+
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path='transactions' element={<Transactions />} />
+          <Route path='transactions/:txId' element={<TransactionDetails />} />
+          <Route path='*' element={<Navigate to='/' replace />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
