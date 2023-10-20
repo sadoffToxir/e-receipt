@@ -1,0 +1,33 @@
+.buttons {
+  margin-top: 25px;
+  padding: 15px 15px;
+  background-color: white;
+  font-size: 14px;
+  box-shadow: 2px 3px 3px 3px rgba( 0, 0, 0, .2);
+  border-radius: 7px;
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.illustration {
+  height: 100px;
+  width: 100px;
+  background-color: #212121;
+  border-radius: 50%;
+}
+
+.button-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-circle:hover {
+  cursor: pointer;
+}
+
+.illustration-desc {
+  padding-top: 15px;
+}
