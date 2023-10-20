@@ -1,0 +1,50 @@
+.navbar {
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  background-color: #d7191e;
+  padding: 15px 15px;
+  margin-bottom: 1px;
+  box-shadow: 2px 3px 3px 3px rgba( 0, 0, 0, .2);
+  border-radius: 7px 7px 0 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .1);
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 1s;
+}
+
+.menu:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, .1);
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 1s;
+}
+
+.logout:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+img {
+  height: 35px;
+}

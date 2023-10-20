@@ -1,23 +1,30 @@
-import './FunctionalButtons.css'
+import classes from './FunctionalButtons.module.css'
+import transfer from '../../assets/transfer.svg'
+import tickets from '../../assets/tickets.svg'
+import qr from '../../assets/qr.svg'
 
 const FunctionalButtons = () => {
   return (
-    <div className="buttons">
-      <div className="button-circle">
-        <div className="illustration">
+    <div className={classes.buttons}>
+      <div className={classes['button-circle']}>
+        <div className={classes.illustration}>
+          <img className={classes.svg} src={qr}></img>
         </div>
-        <p className="illustration-desc">BLIK</p>
+        <p className={classes['illustration-desc']}>Scan and Pay</p>
       </div>
-      <div className="button-circle">
-        <div className="illustration">
-        </div>
-        <p className="illustration-desc">Transfer</p>
-      </div>
-      <div className="button-circle">
-        <div className="illustration">
 
+      <div className={classes['button-circle']}>
+        <div className={classes.illustration}>
+          <img className={classes.svg} src={transfer}></img>
         </div>
-        <p className="illustration-desc">Scan and Pay</p>
+        <p className={classes['illustration-desc']}>Transfer</p>
+      </div>
+
+      <div className={classes['button-circle']}>
+        <div className={classes.illustration}>
+          <img className={classes.svg} src={tickets}></img>
+        </div>
+        <p className={classes['illustration-desc']}>Tickets</p>
       </div>
     </div>
   )
