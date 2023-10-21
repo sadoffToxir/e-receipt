@@ -1,0 +1,10 @@
+.transactions-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transactions-details__title {
+  font-size: 1.25em;
+  color: #626262;
+}
