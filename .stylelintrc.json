@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "stylelint-config-recommended"
+  ],
+  "rules": {
+    "media-query-no-invalid": [
+      true,
+      {
+        "allowed-types": [
+          "screen",
+          "print",
+          "only",
+          "import"
+        ]
+      }
+    ]
+  }
+}

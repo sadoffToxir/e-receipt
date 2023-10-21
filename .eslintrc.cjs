@@ -22,5 +22,6 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'no-multiple-empty-lines': ['error', { 'max': 1 }],
     'semi': ['error', 'never'],
+    'quote-props': ["error", "as-needed", { "keywords": true, "unnecessary": true }]
   },
 }

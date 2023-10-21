@@ -1,51 +1,37 @@
+import PropTypes from 'prop-types'
+import { useNavigate } from 'react-router-dom'
+
 import './TransactionsList.css'
 
-const TransactionsList = () => {
+const TransactionsList = (props) => {
+
+  const navigate = useNavigate()
+
+  const goToTransaction = (id) => {
+    return navigate(`/transactions/${id}`)
+  }
+
   return (
     <div className='transactions'>
       <div className='transaction'>
-        <div className='transaction-info'>
-          <p className='company'>Commerzbank</p>
-          <p className='amount'>-150$</p>
-        </div>
-        <div className='transaction-details'>
-          <p className='transaction-type'>By Card</p>
-          <p className='transaction-receipt'> View Receipt</p>
-        </div>
-      </div>
-      <div className='transaction'>
-        <div className='transaction-info'>
-          <p className='company'>Commerzbank</p>
-          <p className='amount'>-150$</p>
-        </div>
-        <div className='transaction-details'>
-          <p className='transaction-type'>By Card</p>
-          <p className='transaction-receipt'> View Receipt</p>
-        </div>
-      </div>
-      <div className='transaction'>
-        <div className='transaction-info'>
-          <p className='company'>Commerzbank</p>
-          <p className='amount'>-150$</p>
-        </div>
-        <div className='transaction-details'>
-          <p className='transaction-type'>By Card</p>
-          <p className='transaction-receipt'> View Receipt</p>
-        </div>
-      </div>
-      <div className='transaction'>
-        <div className='transaction-info'>
-          <p className='company'>Commerzbank</p>
-          <p className='amount'>-150$</p>
-        </div>
-        <div className='transaction-details'>
-          <p className='transaction-type'>By Card</p>
-          <p className='transaction-receipt'> View Receipt</p>
-        </div>
+        {
+          props.transactionsList.map((transaction, index) => {
+            return (
+              <div className='transaction-info' key={index} onClick={() => goToTransaction(transaction.id)}>
+                <p className='company'>{transaction.recipient}</p>
+                <p className='amount'>{transaction.amount}$</p>
+              </div>
+            )
+          })
+        }
       </div>
 
     </div>
   )
+}
+
+TransactionsList.propTypes = {
+  transactionsList: PropTypes.array
 }
 
 export default TransactionsList
