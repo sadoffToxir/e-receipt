@@ -17,11 +17,13 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'indent': ['error', 2],
+    'react/jsx-indent': ['error', 2],
     'quotes': ['error', 'single'],
     'jsx-quotes': ['error', 'prefer-single'],
     'object-curly-spacing': ['error', 'always'],
     'no-multiple-empty-lines': ['error', { 'max': 1 }],
     'semi': ['error', 'never'],
+    "no-empty": "error",
     'quote-props': ["error", "as-needed", { "keywords": true, "unnecessary": true }]
   },
 }
