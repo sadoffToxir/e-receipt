@@ -8,20 +8,33 @@
 
   display: flex;
   justify-content: space-between;
-
 }
 
 .illustration {
   height: 100px;
   width: 100px;
-  background-color: #212121;
+  background-color: #898989;
   border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  
+}
+
+.button-circle:hover {
+
+  transform: scale(1.1);
 }
 
 .button-circle {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .button-circle:hover {
@@ -30,4 +43,8 @@
 
 .illustration-desc {
   padding-top: 15px;
+}
+
+.svg {
+  height: 50px;
 }

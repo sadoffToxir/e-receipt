@@ -1,10 +1,13 @@
-import './Navbar.css'
+import classes from './Navbar.module.css'
+import logout from '../../assets/logout.svg'
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <div className="menu">Menu</div>
-      <div className="logout">Log Out</div>
+    <div className={classes.navbar}>
+      <div className={classes.menu}>Home</div>
+      <div className={classes.logout}>
+        <img src={logout}></img>
+      </div>
     </div>
   )
 }
