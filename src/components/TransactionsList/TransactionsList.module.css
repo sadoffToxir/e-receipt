@@ -1,6 +1,5 @@
-.transaction {
+.transactions-list {
   margin-top: 25px;
-  padding: 15px 15px;
   background-color: white;
   font-size: 14px;
   box-shadow: 2px 3px 3px 3px rgba( 0, 0, 0, .2);
@@ -9,16 +8,33 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.transaction {
 
-.transaction-info, .transaction-details {
+}
+
+.transaction-details {
   display: flex;
   justify-content: space-between;
+  padding: 0 15px;
+}
+
+.transaction:hover, .transaction:active {
+  background-color: #e5e5e5;
 }
 
 .company {
   font-size: 18px;
+  width: fit-content;
+}
+
+.amount {
+  width: fit-content;
 }
 
 .transaction-type {
   color: grey;
+}
+
+.divider {
+  margin: 0 5% !important;
 }

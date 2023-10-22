@@ -1,50 +1,45 @@
 .buttons {
   margin-top: 25px;
-  padding: 15px 15px;
+  padding: 15px;
   background-color: white;
   font-size: 14px;
   box-shadow: 2px 3px 3px 3px rgba( 0, 0, 0, .2);
   border-radius: 7px;
-
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-circle {
+  width: 90px;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .illustration {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   background-color: #898989;
   border-radius: 50%;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  
 }
 
-.button-circle:hover {
 
+.button-circle:hover {
   transform: scale(1.1);
-}
-
-.button-circle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.button-circle:hover {
   cursor: pointer;
 }
 
 .illustration-desc {
-  padding-top: 15px;
+  margin: 10px 0 0;
+  word-wrap: break-word;
+  text-align: center;
 }
 
-.svg {
-  height: 50px;
+.img {
+  height: 25px;
 }

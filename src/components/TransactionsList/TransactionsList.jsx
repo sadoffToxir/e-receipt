@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
 import { useNavigate } from 'react-router-dom'
 
-import './TransactionsList.css'
+import Divider from '@mui/material/Divider'
+
+import transactionsList from './TransactionsList.module.css'
 
 const TransactionsList = (props) => {
 
@@ -12,20 +14,20 @@ const TransactionsList = (props) => {
   }
 
   return (
-    <div className='transactions'>
-      <div className='transaction'>
-        {
-          props.transactionsList.map((transaction, index) => {
-            return (
-              <div className='transaction-info' key={index} onClick={() => goToTransaction(transaction.id)}>
-                <p className='company'>{transaction.recipient}</p>
-                <p className='amount'>{transaction.amount}$</p>
+    <div className={transactionsList['transactions-list']}>
+      {
+        props.transactionsList.map((transaction, index) => {
+          return (
+            <div className={transactionsList.transaction} key={index}>
+              <div className={transactionsList['transaction-details']} onClick={() => goToTransaction(transaction.id)}>
+                <p className={transactionsList.company}>{transaction.recipient}</p>
+                <p className={transactionsList.amount}>{transaction.amount} zl</p>
               </div>
-            )
-          })
-        }
-      </div>
-
+              {props.transactionsList.length > (index + 1) && <Divider variant='inset' component='div' className={transactionsList.divider} />}
+            </div>
+          )
+        })
+      }
     </div>
   )
 }

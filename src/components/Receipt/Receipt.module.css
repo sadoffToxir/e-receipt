@@ -1,7 +1,7 @@
 .receipt {
   border: 1px solid black;
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   padding: 10px 20px;
 
   transition: "all .2s",
@@ -34,4 +34,11 @@
 .summarizing {
   display: flex;
   justify-content: space-between;  
+}
+
+.downloadReceipt {
+  color: blue;
+  text-align: end;
+  width: 100%;
+  margin-top: 20px;
 }
