@@ -1,13 +1,32 @@
 import PropTypes from 'prop-types'
+import Snackbar from '@mui/material/Snackbar'
+import Alert from '@mui/material/Alert'
 
 import receiptCss from './Receipt.module.css'
 
+import { useState } from 'react'
+
 export const Receipt = (props) => {
+  const [open, setOpen] = useState(false)
+
+  const handleClick = () => {
+    setTimeout(() => {
+      setOpen(true)
+    }, 1000)
+  }
 
   const receiptItems = (receipt) => {
     return Object.keys(receipt.items).map((key, index) => {
       return <div key={index}><span>{key}:</span> <span>{receipt.items[key]} zl</span></div>
     })
+  }
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return
+    }
+
+    setOpen(false)
   }
 
   return (
@@ -33,6 +52,14 @@ export const Receipt = (props) => {
           {props.receipt.total} zl
         </span>
       </div>
+      <div className={receiptCss.downloadReceipt} onClick={handleClick}>
+        Download PDF
+      </div>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity='success' sx={{ width: '100%' }}>
+          Downloaded successfully!
+        </Alert>
+      </Snackbar>
     </div>
   )
 }

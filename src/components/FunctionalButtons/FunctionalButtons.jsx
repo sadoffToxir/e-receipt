@@ -8,21 +8,21 @@ const FunctionalButtons = () => {
     <div className={classes.buttons}>
       <div className={classes['button-circle']}>
         <div className={classes.illustration}>
-          <img className={classes.svg} src={qr}></img>
+          <img className={classes.img} src={qr}></img>
         </div>
         <p className={classes['illustration-desc']}>Scan and Pay</p>
       </div>
 
       <div className={classes['button-circle']}>
         <div className={classes.illustration}>
-          <img className={classes.svg} src={transfer}></img>
+          <img className={classes.img} src={transfer}></img>
         </div>
         <p className={classes['illustration-desc']}>Transfer</p>
       </div>
 
       <div className={classes['button-circle']}>
         <div className={classes.illustration}>
-          <img className={classes.svg} src={tickets}></img>
+          <img className={classes.img} src={tickets}></img>
         </div>
         <p className={classes['illustration-desc']}>Tickets</p>
       </div>
